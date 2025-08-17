@@ -13,7 +13,9 @@
   <body>
   <marquee behavior="scroll" direction="left">
  <img src="/glarpfield-removebg-preview.png" width="350" height="150" alt="Natural" />  </marquee>
-    
+  
+ <div id="overlay"><p class="para">WARNING: this is my very first website that i actually made myself, but for the sake of preserving it as is, ALOT of the info here is outdated (eg. some 404's, outdated info and more)</p></div>
+
   <h1> Welcome to my Website </h1>
   
   <p> my name is samidy, just made this website for fun really. check it out</p>
@@ -41,3 +43,24 @@
     
   
     
+<script>
+// this is all just for the opening transition, nothing else is needed
+const overlay = document.getElementById("overlay")
+const footer = document.getElementById("footer")
+const main = document.getElementById("main")
+const body = document.body;
+
+overlay.addEventListener("click", enter);
+
+function enter() {
+	overlay.style.opacity = "0";
+	footer.style.opacity = "1";
+	main.style.display = "block";
+	setTimeout(fadeIn, 1500)
+}
+
+function fadeIn() {
+	main.style.opacity = "1";
+	overlay.style.display = "none";
+}
+</script>
